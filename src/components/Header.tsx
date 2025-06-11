@@ -26,11 +26,11 @@ export default function Header() {
       <Heading
         as={RouterLink}
         to="/"
-        fontWeight="bold"
-        fontSize={{ base: 'xl', md: '3xl' }}
+        fontWeight="light"
+        fontSize={{ base: 'xl', md: '2xl' }}
         userSelect="none"
-        color="white"
-        textShadow={`0 0 15px ${vibrantAccent}, 0 0 30px rgba(129, 231, 175, 0.5)`}
+        // Changed color to a dark gray/silver-dark, removed textShadow for simplicity
+        color="hsl(0, 0%, 50%)" // Dark gray color (HSL: hue 0, saturation 0%, lightness 50%)
         letterSpacing="0.05em"
         _hover={{ textDecoration: 'none', opacity: 0.8 }}
       >

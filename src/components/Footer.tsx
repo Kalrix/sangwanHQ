@@ -1,9 +1,7 @@
-// src/components/Footer.tsx
 import { Flex, Box, Link, Icon } from '@chakra-ui/react';
 
-const vibrantAccent = "#81E7AF"; // Your defined vibrant accent color
+const vibrantAccent = "#81E7AF";
 
-// Re-use the DiagonalArrowIcon for consistency
 const DiagonalArrowIcon = (props: any) => (
   <Icon
     viewBox="0 0 24 24"
@@ -28,24 +26,20 @@ export default function Footer() {
       px={{ base: 6, md: 12, lg: 16 }}
       justify="space-between"
       align="center"
-      textAlign="center"
       fontSize={{ base: 'xs', md: 'sm' }}
       color="gray.600"
       opacity={0.7}
       userSelect="none"
-      bg="rgba(0,0,0,0.8)" // Matching header background for consistency
+      bg="rgba(0,0,0,0.8)"
       backdropFilter="blur(8px)"
-      // Border color adjusted to match vibrantAccent's RGBA
-      borderTop="1px solid rgba(129, 231, 175, 0.05)" // Subtle top border
+      borderTop="1px solid rgba(129, 231, 175, 0.05)"
       boxShadow="0 -2px 10px rgba(0,0,0,0.2)"
-      // --- Changed to FIXED positioning ---
-      position="fixed" // Now fixed to the viewport
-      bottom="0"       // Sticks to the bottom edge
-      left="0"         // Spans full width
-      right="0"        // Spans full width
-      zIndex="fixedFooter" // Use defined z-index from theme
-      // Set height for consistent padding in main content
-      height="var(--chakra-sizes-footerHeight)" // Use theme variable
+      position="fixed"
+      bottom="0"
+      left="0"
+      right="0"
+      zIndex={1} // 👈 keep it low so your nav with zIndex={10/9999} stays above
+      height="64px"
     >
       <Box>
         © {new Date().getFullYear()} SangwanHQ. All rights reserved.
@@ -60,7 +54,10 @@ export default function Footer() {
         _hover={{
           color: "white",
           textDecoration: 'none',
-          '.diagonal-arrow-icon': { transform: 'translateX(2px) translateY(-2px)', color: "white" }
+          '.diagonal-arrow-icon': {
+            transform: 'translateX(2px) translateY(-2px)',
+            color: "white"
+          }
         }}
         transition="all 0.3s ease-out"
       >

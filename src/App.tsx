@@ -1,6 +1,6 @@
 import { Box, Flex } from '@chakra-ui/react';
 import { Routes, Route } from 'react-router-dom';
-import { keyframes as emotionKeyframes } from '@emotion/react';
+import { keyframes } from '@emotion/react';
 
 // Layout Components
 import Header from './components/Header';
@@ -18,12 +18,12 @@ import RegisterPage from './pages/Register';
 const vibrantAccent = "#81E7AF";
 
 // Background Animations
-const nebulaShift = emotionKeyframes`
+const nebulaShift = keyframes`
   0% { background-position: 0% 0%; }
   100% { background-position: 100% 100%; }
 `;
 
-const subtleGridPulse = emotionKeyframes`
+const subtleGridPulse = keyframes`
   0% { transform: scale(1); opacity: 0.05; }
   50% { transform: scale(1.02); opacity: 0.08; }
   100% { transform: scale(1); opacity: 0.05; }
@@ -58,6 +58,7 @@ export default function App() {
         filter="blur(30px)"
         opacity="0.8"
       />
+
       <Box
         position="fixed"
         top="0"
