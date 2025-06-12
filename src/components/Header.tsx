@@ -29,8 +29,7 @@ export default function Header() {
         fontWeight="light"
         fontSize={{ base: 'xl', md: '2xl' }}
         userSelect="none"
-        // Changed color to a dark gray/silver-dark, removed textShadow for simplicity
-        color="hsl(0, 0%, 50%)" // Dark gray color (HSL: hue 0, saturation 0%, lightness 50%)
+        color="hsl(0, 0%, 50%)"
         letterSpacing="0.05em"
         _hover={{ textDecoration: 'none', opacity: 0.8 }}
       >
@@ -47,8 +46,9 @@ export default function Header() {
           _hover={{ color: vibrantAccent, textDecoration: 'none' }}
           transition="color 0.2s ease-out"
         >
-          N Theory
+          Atom-Loop
         </Link>
+
         <Link
           as={RouterLink}
           to="/ventures"
@@ -72,7 +72,6 @@ export default function Header() {
           Case Study
         </Link>
 
-        {/* Replaced APPLY with LOGIN */}
         <Button
           as={RouterLink}
           to="/login"

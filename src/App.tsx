@@ -13,6 +13,9 @@ import VenturesPage from './pages/VenturesPage';
 import ApplyPage from './pages/ApplyPage';
 import LoginPage from './pages/Login';
 import RegisterPage from './pages/Register';
+import OrbitRadar3D from './components/NTheory/OrbitRadar3D';
+
+
 
 // Accent Color
 const vibrantAccent = "#81E7AF";
@@ -92,6 +95,8 @@ export default function App() {
           <Route path="/apply" element={<ApplyPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
+          <Route path="/orbitradar" element={<OrbitRadar3D />} />
+
         </Routes>
       </Box>
 
