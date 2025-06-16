@@ -1,29 +1,36 @@
-// src/pages/HeroSection.tsx
-import { Box, Button, Flex, Heading, Text } from "@chakra-ui/react";
-import { keyframes as emotionKeyframes } from "@emotion/react";
-import { Link as RouterLink } from "react-router-dom";
+import {
+  Box,
+  Flex,
+  Heading,
+  Text,
+  Button,
+  IconButton,
+  Link,
+  Stack,
+  Icon,
+} from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
+import { FaTwitter, FaBookOpen, FaLinkedin } from "react-icons/fa";
 import BeamsBackground from "../components/BeamsBackground";
+import ProfileCard from "../components/ProfileCard";
 
-const primaryAccent = "#81E7AF";
-const brandGlow = "rgba(129, 231, 175, 0.5)";
-
-// Animations
-const fadeInUp = emotionKeyframes`
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-`;
+const accentColor = "#5894FF";
+const glowColor = "#93A3DA";
+const textColor = "#C9D1D9";
 
 export default function HeroSection() {
+  const navigate = useNavigate();
+
   return (
     <Flex
       direction="column"
-      align="center"
-      justify="center"
-      textAlign="center"
       minH="100vh"
       position="relative"
-      zIndex="1"
       overflow="hidden"
+      px={{ base: 4, md: 8 }}
+      py={{ base: 8, md: 16 }}
+      justify="center"
+      zIndex="1"
     >
       <BeamsBackground />
 
@@ -45,107 +52,109 @@ export default function HeroSection() {
           left: 0,
           w: "100%",
           h: "100%",
-          bg: "rgba(0, 0, 0, 0.4)",
+          bg: "rgba(0, 0, 0, 0.5)",
         }}
       />
 
-      <Box
-        px={{ base: 6, sm: 8, md: 12, lg: 16 }}
-        py={{ base: 8, md: 12 }}
-        maxW="1400px"
+      <Flex
+        direction={{ base: "column", md: "row" }}
+        align="center"
+        justify="center"
+        gap={12}
+        maxW="6xl"
         mx="auto"
-        color="white"
+        zIndex={1}
       >
-        <Heading
-          as="h2"
-          fontSize={{ base: '4xl', sm: '5xl', md: '6xl', lg: '7xl' }}
-          fontWeight="extrabold"
-          color={primaryAccent}
-          letterSpacing="0.1em"
-          textTransform="uppercase"
-          mb={{ base: 4, md: 6 }}
-          animation={`${fadeInUp} 1s ease-out 0.5s forwards`}
-          textShadow={`0 0 15px ${primaryAccent}, 0 0 30px ${brandGlow}`}
-        >
-          ATOM <Text as="span" color={primaryAccent} fontSize="1.5em" lineHeight="1" display="inline-block">∞</Text>
+        {/* Profile Card */}
+        <Box flexShrink={0}>
+          <ProfileCard
+            name=""
+            title=""
+            handle="SangwanHQ"
+            status="On X"
+            contactText="Check X"
+            avatarUrl="/im.jpg"
+            miniAvatarUrl="/im.jpg"
+            showUserInfo={true}
+            enableTilt={true}
+            onContactClick={() =>
+              window.open("https://x.com/SangwanHQ", "_blank")
+            }
+          />
+        </Box>
 
-        </Heading>
-
-        <Heading
-          as="h1"
-          fontSize={{ base: '3xl', sm: '4xl', md: '5xl', lg: '6xl' }}
-          fontWeight="bold"
-          mb={{ base: 10, md: 14 }}
-          color="white"
-          letterSpacing="tight"
-          animation={`${fadeInUp} 1s ease-out 0.8s forwards`}
-          lineHeight="1.2"
-        >
-          Build Your Startup from 0 to 1 to ∞<br />Build the Core.{" "}
-          <Text as="span" color={primaryAccent}>Loop it to Scale.</Text>
-        </Heading>
-
-        <Flex
-          direction={{ base: 'column', sm: 'row' }}
-          gap={6}
-          animation={`${fadeInUp} 1s ease-out 1.5s forwards`}
-          width={{ base: '80%', sm: 'auto' }}
-          maxW="700px"
-          mx="auto"
-        >
-          <Button
-            as={RouterLink}
-            to="/n-theory"
-            size={{ base: 'lg', md: 'xl' }}
-            px={{ base: 10, md: 12 }}
-            py={{ base: 7, md: 8 }}
-            borderRadius="md"
-            bg={primaryAccent}
-            color="black"
+        {/* Right Section */}
+        <Box maxW="lg" textAlign={{ base: "center", md: "left" }}>
+          <Heading
+            fontSize={{ base: "3xl", md: "5xl", lg: "6xl" }}
             fontWeight="bold"
-            fontSize={{ base: 'lg', md: 'xl' }}
-            letterSpacing="0.08em"
-            boxShadow={`0 6px 20px ${brandGlow}`}
-            _hover={{
-              bg: "transparent",
-              color: primaryAccent,
-              border: `2px solid ${primaryAccent}`,
-              boxShadow: `0 8px 35px ${brandGlow}`,
-              transform: 'translateY(-3px)',
-            }}
-            transition="all 0.3s ease-out"
-            aria-label="Explore Atom Loop"
+            mb={4}
+            lineHeight="1.2"
+            color={accentColor}
           >
-            Explore Atom Loop
-          </Button>
+            Udit Sangwan
+          </Heading>
+
+          <Text fontSize={{ base: "md", md: "lg" }} color={textColor} mb={6}>
+            Building <Text as="span" color={accentColor}>agrigator</Text>.<br />
+            Ex-Rivigo, ZipGo, Apnalot. <Text as="span" color={accentColor}>IIMA alum.</Text><br />
+            I write, build, and bark (with my dog).<br />
+            Cricket 💜, Rohit Sharma Fan.
+          </Text>
+
+          <Stack direction="row" spacing={4} mb={6} justify={{ base: "center", md: "flex-start" }}>
+  <Link href="https://x.com/SangwanHQ" isExternal>
+    <IconButton
+      icon={<FaTwitter />}
+      aria-label="Twitter"
+      size="lg"
+      variant="ghost"
+      color={textColor}
+      _hover={{ color: accentColor }}
+    />
+  </Link>
+  <Link href="https://substack.com/@sangwanhq" isExternal>
+    <IconButton
+      icon={<FaBookOpen />}
+      aria-label="Substack"
+      size="lg"
+      variant="ghost"
+      color={textColor}
+      _hover={{ color: accentColor }}
+    />
+  </Link>
+  <Link href="https://linkedin.com/in/uditbsangwan" isExternal>
+    <IconButton
+      icon={<FaLinkedin />}
+      aria-label="LinkedIn"
+      size="lg"
+      variant="ghost"
+      color={textColor}
+      _hover={{ color: accentColor }}
+    />
+  </Link>
+</Stack>
+
 
           <Button
-            as={RouterLink}
-            to="/apply"
-            size={{ base: 'lg', md: 'xl' }}
-            px={{ base: 10, md: 12 }}
-            py={{ base: 7, md: 8 }}
-            borderRadius="md"
-            bg="transparent"
+            size="lg"
+            bg={accentColor}
             color="white"
             fontWeight="bold"
-            fontSize={{ base: 'lg', md: 'xl' }}
-            letterSpacing="0.08em"
-            border={`2px solid ${primaryAccent}`}
-            boxShadow={`0 0 12px ${brandGlow}`}
             _hover={{
-              bg: primaryAccent,
-              color: "black",
-              boxShadow: `0 0 25px ${brandGlow}`,
-              transform: 'translateY(-3px)',
+              bg: "transparent",
+              border: `2px solid ${accentColor}`,
+              color: accentColor,
+              transform: "translateY(-2px)",
+              boxShadow: `0 0 20px ${glowColor}`,
             }}
             transition="all 0.3s ease-out"
-            aria-label="Apply to SangwanHQ"
+            onClick={() => navigate("/n-theory")}
           >
-            Build with SangwanHQ
+            Explore Atom Loop →
           </Button>
-        </Flex>
-      </Box>
+        </Box>
+      </Flex>
     </Flex>
   );
 }

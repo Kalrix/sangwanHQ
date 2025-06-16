@@ -428,8 +428,8 @@ export default function BeamsBackground() {
         beamWidth={2}
         beamHeight={15}
         beamNumber={12}
-        lightColor="#81E7AF" // Using your vibrantAccent for the beams light
-        speed={2}
+        lightColor="#6F8FC9" // Using your vibrantAccent for the beams light
+        speed={5}
         noiseIntensity={1.75}
         scale={0.2}
         rotation={0}
