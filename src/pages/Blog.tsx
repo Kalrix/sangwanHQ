@@ -16,7 +16,7 @@ const allPosts = [
     title: "At What Cost",
     summary:
       "Following your passion feels noble—until you realise what it quietly took from you.",
-    url: "https://sangwanhq.substack.com/p/at-what-cost",
+    url: "https://sangwanhq.in/blogs/at-what-cost",
     date: "July 3, 2025",
   },
   
