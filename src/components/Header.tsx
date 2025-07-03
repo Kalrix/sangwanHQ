@@ -72,31 +72,7 @@ export default function Header() {
           Blog
         </Link>
 
-        <Button
-          as={RouterLink}
-          to="/n-theory"
-          size={{ base: 'sm', md: 'md' }}
-          px={{ base: 4, md: 6 }}
-          py={{ base: 2, md: 3 }}
-          borderRadius="md"
-          bg={accentColor}
-          color="white"
-          fontWeight="bold"
-          fontSize={{ base: 'sm', md: 'md' }}
-          letterSpacing="0.02em"
-          boxShadow={`0 0 15px ${glowColor}`}
-          _hover={{
-            bg: "transparent",
-            color: accentColor,
-            border: `2px solid ${accentColor}`,
-            boxShadow: `0 0 25px ${glowColor}`,
-            transform: 'translateY(-1px)',
-          }}
-          transition="all 0.3s ease-out"
-          aria-label="Explore Atom Loop"
-        >
-          Explore A∞
-        </Button>
+        
       </Flex>
     </Flex>
   );
