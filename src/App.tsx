@@ -1,44 +1,51 @@
-import { Box } from '@chakra-ui/react';
-import { Routes, Route } from 'react-router-dom';
+import {
+  Box,
+  useDisclosure,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalCloseButton,
+  ModalBody
+} from '@chakra-ui/react';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 
-// Layout Components
 import Header from './components/Header';
 import Footer from './components/Footer';
-
-// Page Components
 import HeroSection from './pages/HeroSection';
-import AtomLoop from './pages/AtomLoop';
-import VenturesPage from './pages/VenturesPage';
-import ApplyPage from './pages/ApplyPage';
-import LoginPage from './pages/Login';
-import RegisterPage from './pages/Register';
+import BlogPage from './pages/Blog';
+import CaseStudy from './pages/CaseStudy'; // ✅ new import
 
 export default function App() {
-  return (
-    <Box bg="black" color="white" fontFamily="'Helvetica Neue', 'Arial', sans-serif">
-      {/* Header */}
-      <Header />
+  const location = useLocation();
+  const isBlogPage = location.pathname === "/blog";
 
-      {/* Scrollable Content */}
-      <Box
-        as="main"
-        minHeight="100vh"
-        pb="64px" // match footer height so content doesn't hide under it
-        pt="64px" // if you have a fixed header, adjust accordingly
-        position="relative"
-        zIndex={1}
-      >
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
+  useEffect(() => {
+    if (isBlogPage) {
+      onOpen();
+    }
+  }, [isBlogPage]);
+
+  return (
+    <Box
+      bg={isBlogPage ? "white" : "black"}
+      color={isBlogPage ? "gray.800" : "white"}
+      fontFamily="'Helvetica Neue', 'Arial', sans-serif"
+      minHeight="100vh"
+    >
+      <Header openOnLoad={isBlogPage} />
+
+      <Box as="main" pt="0px" pb="0px">
         <Routes>
           <Route path="/" element={<HeroSection />} />
-          <Route path="/n-theory/*" element={<AtomLoop />} />
-          <Route path="/ventures" element={<VenturesPage />} />
-          <Route path="/apply" element={<ApplyPage />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/register" element={<RegisterPage />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/case-study" element={<CaseStudy />} /> {/* ✅ new route */}
         </Routes>
       </Box>
 
-      {/* Always-visible Fixed Footer */}
       <Footer />
     </Box>
   );

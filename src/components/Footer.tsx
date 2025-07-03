@@ -1,7 +1,5 @@
 import { Flex, Box, Link, Icon } from '@chakra-ui/react';
 
-const vibrantAccent = "#81E7AF";
-
 const DiagonalArrowIcon = (props: any) => (
   <Icon
     viewBox="0 0 24 24"
@@ -28,17 +26,13 @@ export default function Footer() {
       align="center"
       fontSize={{ base: 'xs', md: 'sm' }}
       color="gray.600"
-      opacity={0.7}
-      userSelect="none"
-      bg="rgba(0,0,0,0.8)"
-      backdropFilter="blur(8px)"
-      borderTop="1px solid rgba(129, 231, 175, 0.05)"
-      boxShadow="0 -2px 10px rgba(0,0,0,0.2)"
+      bg="white"
+      borderTop="1px solid #e5e5e5"
       position="fixed"
       bottom="0"
       left="0"
       right="0"
-      zIndex={1} // 👈 keep it low so your nav with zIndex={10/9999} stays above
+      zIndex={1}
       height="64px"
     >
       <Box>
@@ -50,13 +44,13 @@ export default function Footer() {
         display="flex"
         alignItems="center"
         fontSize={{ base: 'xs', md: 'sm' }}
-        color="gray.500"
+        color="gray.600"
         _hover={{
-          color: "white",
+          color: "black",
           textDecoration: 'none',
           '.diagonal-arrow-icon': {
             transform: 'translateX(2px) translateY(-2px)',
-            color: "white"
+            color: "black"
           }
         }}
         transition="all 0.3s ease-out"
