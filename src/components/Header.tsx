@@ -52,17 +52,6 @@ export default function Header() {
 
         <Link
           as={RouterLink}
-          to="/ventures"
-          fontSize={{ base: 'md', md: 'lg' }}
-          fontWeight="normal"
-          color={textColor}
-          _hover={{ color: accentColor, textDecoration: 'none' }}
-        >
-          Ventures
-        </Link>
-
-        <Link
-          as={RouterLink}
           to="/case-study"
           fontSize={{ base: 'md', md: 'lg' }}
           fontWeight="normal"
