@@ -151,7 +151,7 @@ export default function HeroSection() {
             transition="all 0.3s ease-out"
             onClick={() => navigate("/n-theory")}
           >
-            Explore Atom Loop →
+            Build. Fail. Think. Repeat →
           </Button>
         </Box>
       </Flex>
