@@ -13,17 +13,13 @@ import { useState } from 'react';
 
 const allPosts = [
   {
-    title: "The Invisible Cost of Early Success",
-    summary: "Why success in the early innings might be your biggest enemy.",
-    url: "https://sangwanhq.substack.com/p/the-invisible-cost-of-early-success",
-    date: "July 2, 2025",
+    title: "At What Cost",
+    summary:
+      "Following your passion feels noble—until you realise what it quietly took from you.",
+    url: "https://sangwanhq.substack.com/p/at-what-cost",
+    date: "July 3, 2025",
   },
-  {
-    title: "How Founders Burn Out Before They Start",
-    summary: "The unseen emotional tolls most founders never talk about.",
-    url: "https://sangwanhq.substack.com/p/how-founders-burn-out-before-launch",
-    date: "June 28, 2025",
-  },
+  
   // Add more posts as needed
 ];
 
