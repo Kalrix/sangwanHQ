@@ -16,6 +16,7 @@ import Footer from './components/Footer';
 import HeroSection from './pages/HeroSection';
 import BlogPage from './pages/Blog';
 import CaseStudy from './pages/CaseStudy';
+import Threads from './pages/Threads';
 import AtWhatCost from './pages/blogs/AtWhatCost'; // Add this import
 
 export default function App() {
@@ -45,7 +46,8 @@ export default function App() {
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/case-study" element={<CaseStudy />} />
           <Route path="/blogs/at-what-cost" element={<AtWhatCost />} />
-        </Routes>
+        <Route path="/threads" element={<Threads />} />
+                </Routes>
       </Box>
 
       <Footer />
