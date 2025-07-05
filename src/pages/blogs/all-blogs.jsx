@@ -1,10 +1,10 @@
 export const blogs = [
   {
     id: 'blog-1',
-    title: 'At What Cost?',
-    date: 'July 4, 2025',
-    summary: 'Following your passion feels noble—until you realise what it quietly took from you.',
-    url: 'https://sangwanhq.substack.com/p/at-what-cost',
-    image: '/blog-thumbnails/at-what-cost.jpg', // thin landscape image
+    title: 'When Work Becomes a Hiding Place',
+    date: 'July 6, 2025',
+    summary: 'When passion becomes a shield, not a purpose.',
+    url: 'https://sangwanhq.substack.com/p/when-work-becomes-a-hiding-place',
+    image: '/blog-thumbnails/feature-blog.jpg', // thin landscape image
   },
 ];

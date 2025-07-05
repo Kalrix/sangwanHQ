@@ -1,5 +1,15 @@
 export default function Timeline() {
   const contentList = [
+    
+    {
+      id: 'blog-1',
+      type: 'blog',
+      title: 'At what cost ?',
+      desc: 'No matter how far you run, no matter how big the wins, you eventually start craving the things you ignored. Peace. Health. A quiet day. Family. Balance.',
+      date: 'Jul 3',
+      url: 'https://sangwanhq.substack.com/p/at-what-cost',
+    },
+    
     {
       id: 'thread-1',
       type: 'thread',
@@ -8,22 +18,15 @@ export default function Timeline() {
       date: 'Jul 4',
       url: 'https://x.com/SangwanHQ/status/1941032409811898585',
     },
-    {
-      id: 'blog-1',
-      type: 'blog',
-      title: 'How to Build Conviction',
-      desc: 'Startups that win often look wrong at the beginning.',
-      date: 'Jul 3',
-      url: 'https://sangwanhq.in/blog/how-to-build-conviction',
-    },
-    {
-      id: 'case-1',
-      type: 'case',
-      title: 'Building Asva Freight Engine',
-      desc: 'How we designed a modular quoting system for Indian logistics.',
-      date: 'Jul 2',
-      url: '/case-study/asva',
-    },
+    
+    //{
+      //id: 'case-1',
+      //type: 'case',
+      //title: 'Building Asva Freight Engine',
+      //desc: 'How we designed a modular quoting system for Indian logistics.',
+      //date: 'Jul 2',
+      //url: '/case-study/asva',
+    //},
   ];
 
   const typeIcon = {
