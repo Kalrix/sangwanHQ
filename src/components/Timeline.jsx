@@ -1,6 +1,24 @@
 export default function Timeline() {
   const contentList = [
     
+     {
+      id: 'thread-2',
+      type: '𝕏-thread',
+      title: 'Thinking of starting a deep-tech company in India?',
+      desc: 'The government just launched the RDI scheme-and it could quietly change how innovation is funded in this country. ',
+      date: 'Jul 6',
+      url: 'https://x.com/SangwanHQ/status/1941725024194580739',
+    },
+
+    {
+      id: 'thread-1',
+      type: '𝕏-thread',
+      title: 'SEBI has banned US trading giant Jane Street.',
+      desc: 'The firm is accused of manipulating index options on expiry days, making over ₹4,843 crore in illegal gains..... ',
+      date: 'Jul 4',
+      url: 'https://x.com/SangwanHQ/status/1941032409811898585',
+    },
+
     {
       id: 'blog-1',
       type: 'blog',
@@ -10,14 +28,6 @@ export default function Timeline() {
       url: 'https://sangwanhq.substack.com/p/at-what-cost',
     },
     
-    {
-      id: 'thread-1',
-      type: 'thread',
-      title: 'SEBI has banned US trading giant Jane Street.',
-      desc: 'The firm is accused of manipulating index options on expiry days, making over ₹4,843 crore in illegal gains..... ',
-      date: 'Jul 4',
-      url: 'https://x.com/SangwanHQ/status/1941032409811898585',
-    },
     
     //{
       //id: 'case-1',
@@ -73,7 +83,7 @@ export default function Timeline() {
               gap: '4px',
             }}
           >
-            Read on{' '}
+            Read on  {' '}
             <span
               dangerouslySetInnerHTML={{
                 __html: typeIcon[item.type],
