@@ -19,7 +19,7 @@ const caseStudies = [
     name: 'Zepto',
     description: '10-minute grocery. Dark stores. The scale war.',
     logo: '/logos/zepto.png',
-    url: 'https://www.sangwanhq.in/blogs/zepto-isnt-a-grocery-app.html',
+    url: 'https://sangwanhq.substack.com/p/zepto-isnt-a-grocery-app-its-a-wager',
     tag: 'Latest',
   },
   // more coming soon...
