@@ -68,6 +68,18 @@ export default function Header({ openOnLoad }: HeaderProps) {
         </Heading>
 
         <Flex as="nav" align="center" gap={{ base: 4, md: 8 }}>
+         
+         <Link
+            as={RouterLink}
+            to="https://sangwanhq.substack.com/t/zer02vc"
+            fontSize={{ base: 'md', md: 'lg' }}
+            fontWeight="normal"
+            color={linkColor}
+            _hover={{ color: hoverColor, textDecoration: 'none' }}
+          >
+            Zer02VC
+          </Link>
+         
           <Link
             as={RouterLink}
             to="/blog"
@@ -78,6 +90,8 @@ export default function Header({ openOnLoad }: HeaderProps) {
           >
             Thoughts
           </Link>
+
+          
 
           <Link
             as={RouterLink}
