@@ -1,7 +1,15 @@
 export default function Timeline() {
   const contentList = [
     
-     {
+    {
+      id: 'thread-3',
+      type: '𝕏-thread',
+      title: 'UAE just made a bold move',
+      desc: 'Indians can now get a 10-year #GoldenVisa by investing just ₹23 lakh.No need to buy property. No million-dollar net worth.',
+      date: 'Jul 7',
+      url: 'https://x.com/SangwanHQ/status/1942134687754760244',
+    }, 
+    {
       id: 'thread-2',
       type: '𝕏-thread',
       title: 'Thinking of starting a deep-tech company in India?',
