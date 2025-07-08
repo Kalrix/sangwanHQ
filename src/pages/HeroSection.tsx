@@ -44,8 +44,8 @@ Life’s the board. We’re all players. I decode marketing, psychology, and str
           <Link href="https://sangwanhq.substack.com" isExternal>
             <Button variant="ghost" colorScheme="gray">Substack</Button>
           </Link>
-          <Link href="https://instagram.com/sangwanHQ" isExternal>
-            <Button variant="ghost" colorScheme="gray">Instagram</Button>
+          <Link href="https://www.linkedin.com/in/sangwanhq/" isExternal>
+            <Button variant="ghost" colorScheme="gray">LinkedIn</Button>
           </Link>
         </Stack>
       </Stack>
