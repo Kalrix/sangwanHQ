@@ -77,7 +77,7 @@ export default function Header({ openOnLoad }: HeaderProps) {
             color={linkColor}
             _hover={{ color: hoverColor, textDecoration: 'none' }}
           >
-            ∞Market
+            ∞ Market
           </Link>
          
           <Link
